@@ -32,7 +32,7 @@ const updates = [
 
 export function Stats() {
   return (
-    <section className="relative pt-0 pb-24 sm:pb-32 lg:pb-48 bg-[#0D0B1A] overflow-hidden">
+    <section className="relative -mt-[50px] pt-0 pb-24 sm:pb-32 lg:pb-48 bg-[#0D0B1A] overflow-hidden">
       {/* Decorative background */}
       <div aria-hidden className="pointer-events-none absolute top-1/3 -right-40 w-96 h-96 rounded-full bg-[#FC801D]/8 blur-[120px] opacity-50 sm:opacity-100" />
       <div aria-hidden className="pointer-events-none absolute bottom-0 -left-40 w-96 h-96 rounded-full bg-[#7B61FF]/6 blur-[120px] opacity-50 sm:opacity-100" />
