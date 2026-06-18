@@ -28,13 +28,13 @@ export function Navbar() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-colors duration-300 ${
         scrolled
-          ? "bg-[#0D0B1A]/80 backdrop-blur-xl border-b border-white/[0.08] shadow-sm"
+          ? "bg-[#0D0B1A]/85 backdrop-blur-xl border-b border-white/[0.08]"
           : "bg-transparent border-b border-transparent"
       }`}
     >
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5 lg:px-8">
+      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 lg:px-8 h-16">
         {/* Logo */}
         <a href="/" className="flex items-center gap-3">
           <span className="text-lg font-black tracking-[0.12em] text-white uppercase">
