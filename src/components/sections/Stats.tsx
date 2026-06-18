@@ -52,23 +52,28 @@ export function Stats() {
           {updates.map(({ badge, badgeColor, title, description, cta }) => (
             <div
               key={title}
-              className="group relative flex flex-col gap-4 sm:gap-5 lg:gap-6 rounded-2xl border border-white/[0.08] bg-gradient-to-br from-white/[0.05] to-white/[0.01] backdrop-blur-md p-6 sm:p-7 lg:p-8 hover:border-white/[0.15] hover:bg-white/[0.08] transition-all duration-300 overflow-hidden"
+              className="group relative flex flex-col rounded-2xl border border-white/[0.08] bg-gradient-to-br from-white/[0.05] to-white/[0.01] backdrop-blur-md p-6 sm:p-7 lg:p-8 hover:border-white/[0.15] hover:bg-white/[0.08] transition-all duration-300 overflow-hidden"
             >
               <div className="absolute inset-0 bg-gradient-to-br from-[#7B61FF]/0 to-[#FC801D]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               <div className="absolute inset-0 bg-gradient-to-t from-white/[0.02] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              
-              <div className="relative space-y-4 sm:space-y-5">
-                <span className={`w-fit rounded-full border px-2.5 sm:px-3 py-1 sm:py-1.5 text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.12em] ${badgeColor}`}>
+
+              {/* Badge */}
+              <div className="relative mb-5">
+                <span className={`inline-flex items-center whitespace-nowrap rounded-full border px-3 py-1 text-[10px] font-bold uppercase tracking-[0.14em] leading-none ${badgeColor}`}>
                   {badge}
                 </span>
+              </div>
+
+              {/* Body */}
+              <div className="relative flex flex-col flex-1 gap-3">
                 <h3 className="text-base sm:text-lg font-bold text-white/95 leading-snug">{title}</h3>
                 <p className="text-xs sm:text-sm text-white/45 leading-relaxed flex-1">{description}</p>
                 <a
                   href="#"
-                  className="mt-auto pt-2 inline-flex items-center gap-2 text-[10px] sm:text-xs font-bold uppercase tracking-[0.12em] text-white/40 hover:text-white/80 transition-colors duration-300 group"
+                  className="mt-4 inline-flex items-center gap-2 text-[10px] sm:text-xs font-bold uppercase tracking-[0.12em] text-white/40 hover:text-white/80 transition-colors duration-300 group/link"
                 >
-                  {cta} 
-                  <ArrowRight className="h-3 sm:h-3.5 w-3 sm:w-3.5 group-hover:translate-x-1 transition-transform" />
+                  {cta}
+                  <ArrowRight className="h-3 sm:h-3.5 w-3 sm:w-3.5 group-hover/link:translate-x-1 transition-transform" />
                 </a>
               </div>
             </div>
