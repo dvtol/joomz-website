@@ -23,6 +23,12 @@ export function Footer() {
             <p className="mt-4 text-xs text-white/25 leading-relaxed tracking-wide max-w-[160px]">
               AI that gets work done,<br />not just gives insights.
             </p>
+            <address className="mt-5 not-italic">
+              <p className="text-xs text-white/25 leading-relaxed">
+                Buitenveldertselaan 150<br />
+                1081AB Amsterdam
+              </p>
+            </address>
             <a
               href="#"
               className="mt-6 inline-flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.15em] text-white/25 transition-colors hover:text-white/60"
