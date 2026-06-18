@@ -59,7 +59,7 @@ const faqData = {
 
 export function FAQ() {
   return (
-    <section className="py-24 lg:py-32 bg-[#0D0B1A]">
+    <section className="-mt-[250px] py-24 lg:py-32 bg-[#0D0B1A]">
       <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
         <p className="text-center text-sm font-semibold uppercase tracking-widest text-[#FC801D] mb-4">
           FAQ
