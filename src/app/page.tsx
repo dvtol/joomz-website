@@ -8,7 +8,6 @@ import { ProductShowcase } from "@/components/sections/ProductShowcase";
 import { Stats } from "@/components/sections/Stats";
 import { FAQ } from "@/components/sections/FAQ";
 import { CTABanner } from "@/components/sections/CTABanner";
-import { AIChatWidget } from "@/components/ui/AIChatWidget";
 
 export default function Home() {
   return (
@@ -25,7 +24,6 @@ export default function Home() {
         <FAQ />
       </main>
       <Footer />
-      <AIChatWidget />
     </div>
   );
 }

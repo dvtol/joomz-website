@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Space_Mono } from "next/font/google";
 import "./globals.css";
+import { AIChatWidget } from "@/components/ui/AIChatWidget";
 
 const inter = Inter({
   variable: "--font-sans",
@@ -31,7 +32,10 @@ export default function RootLayout({
       lang="en"
       className={`${inter.variable} ${spaceMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        {children}
+        <AIChatWidget />
+      </body>
     </html>
   );
 }
