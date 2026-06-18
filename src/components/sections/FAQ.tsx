@@ -59,13 +59,14 @@ const faqData = {
 
 export function FAQ() {
   return (
-    <section className="-mt-[200px] py-24 lg:py-32 bg-[#0D0B1A]">
+    <section className="-mt-[150px] py-24 lg:py-32 bg-[#0D0B1A]">
       <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
         <p className="text-center text-sm font-semibold uppercase tracking-widest text-[#FC801D] mb-4">
           FAQ
         </p>
-        <h2 className="text-center text-4xl font-extrabold text-white mb-8">
-          Frequently asked questions
+        <h2 className="text-center text-4xl font-extrabold mb-8">
+          <span className="text-white/40">Frequently asked </span>
+          <span className="text-white">Questions</span>
         </h2>
 
         <Tabs defaultValue="Joomz AI">
