@@ -61,7 +61,7 @@ export function Navbar() {
         {/* Desktop CTAs */}
         <div className="hidden items-center gap-6 lg:flex">
           <a
-            href="#"
+            href="/login"
             className="text-[11px] font-semibold uppercase tracking-[0.18em] text-white/55 transition-colors hover:text-white"
           >
             Log in
@@ -106,7 +106,7 @@ export function Navbar() {
                 </a>
               ))}
               <div className="mt-2 flex flex-col gap-4 border-t border-white/[0.06] pt-6">
-                <a href="#" className="text-[11px] font-semibold uppercase tracking-[0.2em] text-white/50 hover:text-white">
+                <a href="/login" className="text-[11px] font-semibold uppercase tracking-[0.2em] text-white/50 hover:text-white">
                   Log in
                 </a>
                 <a href="#" className="inline-flex w-fit items-center rounded-full border border-white/20 px-5 py-2 text-[11px] font-semibold uppercase tracking-[0.15em] text-white hover:bg-white hover:text-[#0D0B1A] transition-all">
