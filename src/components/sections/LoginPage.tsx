@@ -120,7 +120,7 @@ export function LoginPage() {
         />
 
         {/* Logo */}
-        <div className="relative flex items-center gap-3">
+        <a href="/" className="relative flex items-center gap-3 transition-opacity hover:opacity-80">
           <div
             className="flex h-10 w-10 items-center justify-center rounded-xl"
             style={{
@@ -138,7 +138,7 @@ export function LoginPage() {
               AI Platform
             </span>
           </div>
-        </div>
+        </a>
 
         {/* Centre copy */}
         <div className="relative space-y-12">
@@ -431,7 +431,7 @@ export function LoginPage() {
             href="/"
             className="text-[10px] uppercase tracking-[0.15em] text-white/20 transition-colors hover:text-white/50"
           >
-            ← Back to joomz.ai
+            ← Back to Joomz Home
           </a>
         </div>
       </div>
