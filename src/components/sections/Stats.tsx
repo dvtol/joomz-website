@@ -32,46 +32,14 @@ const updates = [
 
 export function Stats() {
   return (
-    <section className="relative py-24 sm:py-32 lg:py-48 bg-[#0D0B1A] overflow-hidden">
+    <section className="relative pt-0 pb-24 sm:pb-32 lg:pb-48 bg-[#0D0B1A] overflow-hidden">
       {/* Decorative background */}
       <div aria-hidden className="pointer-events-none absolute top-1/3 -right-40 w-96 h-96 rounded-full bg-[#FC801D]/8 blur-[120px] opacity-50 sm:opacity-100" />
       <div aria-hidden className="pointer-events-none absolute bottom-0 -left-40 w-96 h-96 rounded-full bg-[#7B61FF]/6 blur-[120px] opacity-50 sm:opacity-100" />
 
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
 
-        {/* Remotion animated stats */}
-        <div className="relative mb-24 sm:mb-32 lg:mb-40 overflow-hidden rounded-2xl sm:rounded-3xl border border-white/[0.08] bg-gradient-to-br from-[#13111C] via-[#0D0B1A] to-[#0a0a0a] backdrop-blur-xl p-6 sm:p-10 lg:p-16 shadow-2xl">
-          <div aria-hidden className="pointer-events-none absolute -right-32 -top-32 w-[500px] h-[500px] rounded-full bg-[#FC801D]/10 blur-[100px] opacity-50 sm:opacity-100" />
-          <div aria-hidden className="pointer-events-none absolute -left-32 -bottom-32 w-[500px] h-[500px] rounded-full bg-[#7B61FF]/5 blur-[100px] opacity-50 sm:opacity-100" />
-          
-          <div className="relative space-y-6 sm:space-y-8 lg:space-y-10">
-            <div className="flex items-center gap-3 sm:gap-4">
-              <div className="h-0.5 sm:h-1 w-8 sm:w-12 bg-gradient-to-r from-[#FC801D] to-transparent rounded-full" />
-              <span className="text-[10px] sm:text-xs font-semibold uppercase tracking-[0.3em] text-white/40">Key metrics</span>
-            </div>
-            
-            <div className="relative max-w-3xl">
-              <StatsCounterPlayer />
-            </div>
-
-            <div className="relative border-t border-white/[0.06] pt-6 sm:pt-8 lg:pt-10">
-              <blockquote className="text-sm sm:text-base lg:text-lg text-white/50 italic leading-relaxed max-w-3xl font-light">
-                "With Joomz we finally see which euros actually generate Shopify orders.
-                Our ROAS doubled in 8 weeks."
-              </blockquote>
-              <p className="mt-3 sm:mt-4 lg:mt-5 text-[9px] sm:text-xs uppercase tracking-[0.2em] text-white/30 font-medium">
-                Isabelle Fontaine · CMO, Artécraft
-              </p>
-              <a
-                href="#"
-                className="mt-4 sm:mt-5 lg:mt-6 inline-flex items-center gap-2 sm:gap-3 text-[9px] sm:text-xs font-bold uppercase tracking-[0.15em] text-white/40 hover:text-white/80 transition-colors duration-300 group"
-              >
-                View case study 
-                <ArrowRight className="h-3 sm:h-4 w-3 sm:w-4 group-hover:translate-x-1 transition-transform" />
-              </a>
-            </div>
-          </div>
-        </div>
+        {/* Key metrics removed — simplified Stats section */}
 
         {/* Section header */}
         <div className="inline-flex items-center gap-3 sm:gap-4 mb-8 sm:mb-12 lg:mb-16">
