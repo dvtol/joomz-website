@@ -1,5 +1,47 @@
 import { ArrowRight } from "lucide-react";
 
+// ── App store badge components ───────────────────────────────
+function AppStoreBadge() {
+  return (
+    <a
+      href="#"
+      className="inline-flex items-center gap-3 rounded-xl border border-white/20 bg-black/60 px-5 py-3 backdrop-blur-sm transition-all duration-200 hover:border-white/40 hover:bg-black/80"
+      aria-label="Download on the App Store"
+    >
+      {/* Apple logo */}
+      <svg viewBox="0 0 24 24" className="h-6 w-6 flex-shrink-0 fill-white" aria-hidden>
+        <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+      </svg>
+      <div className="flex flex-col leading-tight">
+        <span className="text-[9px] font-medium uppercase tracking-[0.12em] text-white/60">Download on the</span>
+        <span className="text-[14px] font-bold text-white">App Store</span>
+      </div>
+    </a>
+  );
+}
+
+function GooglePlayBadge() {
+  return (
+    <a
+      href="#"
+      className="inline-flex items-center gap-3 rounded-xl border border-white/20 bg-black/60 px-5 py-3 backdrop-blur-sm transition-all duration-200 hover:border-white/40 hover:bg-black/80"
+      aria-label="Get it on Google Play"
+    >
+      {/* Google Play logo */}
+      <svg viewBox="0 0 24 24" className="h-6 w-6 flex-shrink-0" aria-hidden>
+        <path d="M3.18 23.76c.3.17.64.24 1 .19l12.12-12.12L13 8.56 3.18 23.76z" fill="#EA4335"/>
+        <path d="M20.47 10.37l-2.85-1.62L14.3 12l3.32 3.32 2.85-1.63c.81-.46.81-1.86 0-2.32z" fill="#FBBC04"/>
+        <path d="M4.18.05C3.82 0 3.48.07 3.18.24L16.3 13.37l3.32-3.32L4.18.05z" fill="#4285F4"/>
+        <path d="M3.18.24C2.37.7 2 1.58 2 2.5v19c0 .92.37 1.8 1.18 2.26L16.3 10.63 3.18.24z" fill="#34A853"/>
+      </svg>
+      <div className="flex flex-col leading-tight">
+        <span className="text-[9px] font-medium uppercase tracking-[0.12em] text-white/60">Get it on</span>
+        <span className="text-[14px] font-bold text-white">Google Play</span>
+      </div>
+    </a>
+  );
+}
+
 export function Hero() {
   return (
     <section className="relative h-screen min-h-[600px] [height:100dvh] flex items-center">
@@ -97,6 +139,12 @@ export function Hero() {
             <span className="text-white/50">1,800+ Shopify merchants</span>
             {" "}— no credit card required
           </p>
+
+          {/* App store badges */}
+          <div className="animate-fade-in delay-700 mt-6 sm:mt-8 flex flex-wrap items-center gap-3">
+            <AppStoreBadge />
+            <GooglePlayBadge />
+          </div>
         </div>
       </div>
 
