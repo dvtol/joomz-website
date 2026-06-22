@@ -94,7 +94,7 @@ export function Hero() {
             className="animate-fade-in-up delay-200 text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black leading-[1.0] tracking-[-0.03em] text-white"
             style={{ fontFeatureSettings: '"ss01" 1' }}
           >
-            <span className="text-white">Ctrl + Alt + Humanity.</span>
+            <span className="text-white">Amplifying Human Ingenuity.</span>
             <br />
             <span 
               className="bg-gradient-to-r from-[#7B61FF] via-[#E91E8C] to-[#FC801D] bg-clip-text text-transparent inline-block animate-fade-in-up delay-300"
