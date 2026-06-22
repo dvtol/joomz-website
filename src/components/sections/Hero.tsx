@@ -112,8 +112,7 @@ export function Hero() {
 
           {/* Sub */}
           <p className="animate-fade-in-up delay-300 mt-6 sm:mt-8 max-w-xl text-sm sm:text-base lg:text-lg text-white/80 leading-relaxed font-normal">
-            Connect Shopify, Google, Meta and TikTok Ads — and see at a glance
-            which euros generate real orders.
+            Connect Shopify, Google, Meta and TikTok Ads.
           </p>
 
           {/* CTAs */}
