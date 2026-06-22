@@ -28,44 +28,43 @@ function GoogleIcon() {
   );
 }
 
-// ── Animated metric ticker on the left panel ─────────────────
-const metrics = [
-  { label: "Shopify Revenue", value: "€48.290", color: "#7B61FF" },
-  { label: "Meta ROAS",        value: "5.2×",    color: "#FC801D" },
-  { label: "TikTok ROAS",      value: "2.9×",    color: "#22C55E" },
-  { label: "Google ROAS",      value: "3.8×",    color: "#3B82F6" },
-];
-
-function MetricCard({
-  label,
-  value,
-  color,
-  delay,
-}: {
-  label: string;
-  value: string;
-  color: string;
-  delay: string;
-}) {
+// ── App store badges ─────────────────────────────────────────
+function AppStoreBadge() {
   return (
-    <div
-      className="flex items-center justify-between rounded-xl border px-5 py-3.5 animate-fade-in-up"
-      style={{
-        borderColor: `${color}30`,
-        background: `linear-gradient(135deg, rgba(255,255,255,0.04) 0%, ${color}08 100%)`,
-        animationDelay: delay,
-      }}
+    <a
+      href="#"
+      className="inline-flex items-center gap-3 rounded-xl border border-white/15 bg-white/[0.04] px-5 py-3 transition-all duration-200 hover:border-white/30 hover:bg-white/[0.08]"
+      aria-label="Download on the App Store"
     >
-      <span className="text-xs font-semibold uppercase tracking-[0.1em] text-white/45">
-        {label}
-      </span>
-      <span
-        className="text-2xl font-black leading-none tracking-tight"
-        style={{ color, textShadow: `0 0 20px ${color}50` }}
-      >
-        {value}
-      </span>
-    </div>
+      <svg viewBox="0 0 24 24" className="h-6 w-6 flex-shrink-0 fill-white" aria-hidden>
+        <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+      </svg>
+      <div className="flex flex-col leading-tight">
+        <span className="text-[9px] font-medium uppercase tracking-[0.12em] text-white/50">Download on the</span>
+        <span className="text-[14px] font-bold text-white">App Store</span>
+      </div>
+    </a>
+  );
+}
+
+function GooglePlayBadge() {
+  return (
+    <a
+      href="#"
+      className="inline-flex items-center gap-3 rounded-xl border border-white/15 bg-white/[0.04] px-5 py-3 transition-all duration-200 hover:border-white/30 hover:bg-white/[0.08]"
+      aria-label="Get it on Google Play"
+    >
+      <svg viewBox="0 0 24 24" className="h-6 w-6 flex-shrink-0" aria-hidden>
+        <path d="M3.18 23.76c.3.17.64.24 1 .19l12.12-12.12L13 8.56 3.18 23.76z" fill="#EA4335"/>
+        <path d="M20.47 10.37l-2.85-1.62L14.3 12l3.32 3.32 2.85-1.63c.81-.46.81-1.86 0-2.32z" fill="#FBBC04"/>
+        <path d="M4.18.05C3.82 0 3.48.07 3.18.24L16.3 13.37l3.32-3.32L4.18.05z" fill="#4285F4"/>
+        <path d="M3.18.24C2.37.7 2 1.58 2 2.5v19c0 .92.37 1.8 1.18 2.26L16.3 10.63 3.18.24z" fill="#34A853"/>
+      </svg>
+      <div className="flex flex-col leading-tight">
+        <span className="text-[9px] font-medium uppercase tracking-[0.12em] text-white/50">Get it on</span>
+        <span className="text-[14px] font-bold text-white">Google Play</span>
+      </div>
+    </a>
   );
 }
 
@@ -146,31 +145,25 @@ export function LoginPage() {
             <div className="inline-flex items-center gap-3">
               <div className="h-px w-10 bg-gradient-to-r from-[#7B61FF] to-transparent" />
               <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-white/35">
-                Live dashboard
+                Available on all platforms
               </span>
             </div>
             <h2 className="text-4xl font-black leading-[1.1] tracking-[-0.02em] text-white xl:text-5xl">
-              Your e-commerce
+              Amplifying
               <br />
               <span className="bg-gradient-to-r from-[#7B61FF] via-[#E91E8C] to-[#FC801D] bg-clip-text text-transparent">
-                data at a glance.
+                Human Ingenuity.
               </span>
             </h2>
             <p className="max-w-sm text-sm text-white/45 leading-relaxed">
-              Connect Shopify, Google, Meta and TikTok Ads. See exactly which
-              euros drive real orders — in real-time.
+              Connect Shopify, Google, Meta and TikTok Ads. Your full e-commerce intelligence — on every device.
             </p>
           </div>
 
-          {/* Metric cards */}
-          <div className="space-y-3">
-            {metrics.map((m, i) => (
-              <MetricCard
-                key={m.label}
-                {...m}
-                delay={`${0.1 + i * 0.12}s`}
-              />
-            ))}
+          {/* App store badges */}
+          <div className="flex flex-col gap-3">
+            <AppStoreBadge />
+            <GooglePlayBadge />
           </div>
 
           {/* Bottom line decoration */}
